@@ -9,6 +9,10 @@
                 - get x, get y
                 - diplay the values in coorvalues paragraph
             */
+           var x = event.clientX;
+           var y = event.clientY;
+           var coor = "Coordinates [" + x + "," + y + "]";
+           document.getElementById("coordiv").innerHTML= coor;
         }
 
         function clearCoor() {
@@ -16,11 +20,13 @@
                 TODO implement the function:
                 - clear coorvalues paragraph
             */
+           document.getElementById("coordiv").innerHTML = "";
         }
     </script>
 </head>
 
 <body>
+    
     <h2>JavaScript HTML Events - on mouse move, on mouse out</h2>
     <div id="coordiv" style="width:600px; height:200px; border:1px solid" onmousemove="displayCoordinates(event)" onmouseout="clearCoor()">
     </div>
